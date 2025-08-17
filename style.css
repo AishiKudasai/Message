@@ -29,6 +29,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--dark-color);
+ background: linear-gradient(180deg, #001f3f, #0074D9);
+ animation: backgroundAnimation 10s infinite alternate;
   overflow: hidden;
   perspective: 1000px;
 }
@@ -1112,6 +1114,23 @@ body {
   }
 }
 
+@keyframes backgroundAnimation {
+  0% { background: #001f3f; }
+  100% { background: #0074D9; }
+}
+.flower:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.flower__leaf {
+  background-image: linear-gradient(to top, #ff7f50, #ff6347);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.flower__light {
+  animation: light-ans 4s linear infinite backwards;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
 @keyframes moving-flower-1 {
 
   0%,
@@ -1215,3 +1234,4 @@ body {
 
 
 /*# sourceMappingURL=style.css.map */
+
